@@ -1,0 +1,48 @@
+.container{
+    position: relative;
+    overflow: hidden;
+}
+
+.skyNight{
+    width:100%;
+    height:auto;
+}
+
+.launcher-btn{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #5550;
+    color: white;
+    font-size: 16px;
+    padding: 3%;
+    border: 5px white solid;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.moon{
+    width:50%;
+    position: absolute;
+    transform-origin: center;
+}
+
+
+
+@keyframes rotating {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.rotating {
+    animation: rotating 40s linear infinite;
+}
+
+
+
