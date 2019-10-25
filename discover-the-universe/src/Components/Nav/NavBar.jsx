@@ -3,14 +3,22 @@ import Logo from './Logo/Logo';
 import Title from './Title/Title';
 import State from './State/State';
 import './NavBar.css';
+import './Grid.css';
 
 function NavBar() {
-    
-    return(
-        <div className="row spaces">
-            <Logo />
-            <Title />
-            <State />
+
+    return (
+        <div className="row nav">
+            <div className="mob-3 align-center">
+                <Logo />
+            </div>
+            <div className="mob-8 align-center">
+                <Title />
+            </div>
+            <div className="mob-1"></div>
+            <div className="mob-12">
+                <State />
+            </div>
         </div>
     );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Etat.css';
 
+
 class Etat2 extends React.Component {
     constructor(props) {
         super(props);
@@ -12,6 +13,11 @@ class Etat2 extends React.Component {
             alt="2"
             className="etat2 etat"
             >
+                <img 
+                src="/images/asteroid.png" 
+                alt=""
+                className="img2 img1"
+                />
             </div>
         );
     }

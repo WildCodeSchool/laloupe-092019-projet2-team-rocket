@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 
-h1{
-    font-size: 2rem;
+h3{
     font-family: 'Lobster', cursive;
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
 }
-.titi{
-    align-items: center;
-    margin-top: 10%;
-    
-    }
+

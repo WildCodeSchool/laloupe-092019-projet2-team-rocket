@@ -3,7 +3,7 @@ import './Logo.css';
 
 
 const logo = {
-    url : '/img/logo.png',
+    url : '/images/logo.svg',
     character : 'Discovery the Universe Logo'
 }
 
@@ -15,13 +15,13 @@ class Logo extends React.Component {
     render() {
         return ( 
             <div
-            className="col-2"
+            className=""
             >
 
             <img
             src={logo.url}
             alt={logo.character}
-            className=""
+            className="img2"
             ></img>
             </div>
         );

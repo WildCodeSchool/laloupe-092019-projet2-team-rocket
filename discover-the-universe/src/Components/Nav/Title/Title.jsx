@@ -1,6 +1,6 @@
 import React from 'react';
 import './Title.css';
-
+import '../Grid.css';
 class Title extends React.Component {
     constructor(props) {
         super(props);
@@ -8,18 +8,12 @@ class Title extends React.Component {
     }
     render() {
         return (
-            <div
-            className="col-4">
-
-            <div className="titi row">
-
-            <h1
-            alt="Title"
-            className=""
-            >
-            Discovery The Universe</h1>
-            </div>
-            </div>
+            <div className="mob-12">
+                    <h3
+                        alt="Title"
+                        className=""
+                    >Discovery The Universe</h3>
+                </div>
         );
     }
 }
