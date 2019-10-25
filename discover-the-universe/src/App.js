@@ -9,6 +9,7 @@ class App extends Component{
             <div>
                 <NavBar />
                 <LauncherPage />
+                <LauncherSettings />   
                 <Footer />
 
             </div>
