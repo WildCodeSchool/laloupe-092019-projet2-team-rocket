@@ -1,0 +1,21 @@
+.section2{
+    justify-content: space-around;
+    padding:2rem;
+}
+
+@media screen and (max-width:500px){
+
+    .section2{
+        display:flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .composant-audio{
+        padding: 2rem;
+    }
+
+    .composant-language{
+        padding: 2rem;
+    }
+}
