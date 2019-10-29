@@ -3,7 +3,7 @@ import './Logo.css';
 
 
 const logo = {
-    url : '/images/logo.svg',
+    url : '/images/logo-title.png',
     character : 'Discovery the Universe Logo'
 }
 
