@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Lienfooter.css';
-import '../../../Grid.css';
+import '../../../../Grid.css';
 
 
 

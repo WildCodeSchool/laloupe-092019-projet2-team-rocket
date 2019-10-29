@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './ButtonAudio.css';
-import '../../../Grid.css';
+import '../../../../Grid.css';
 
 class ButtonAudio extends Component{
     constructor(props){

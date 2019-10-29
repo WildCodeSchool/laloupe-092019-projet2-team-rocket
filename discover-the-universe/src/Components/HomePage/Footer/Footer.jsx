@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import LienFooter from './LienFooter/LienFooter';
 import './Footer.css';
-import '../../Grid.css';
+import '../../../Grid.css';
 
 
 class Footer extends Component {
