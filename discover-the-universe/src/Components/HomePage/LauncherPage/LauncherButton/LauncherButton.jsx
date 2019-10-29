@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './LauncherButton.css'
+import './LauncherButton.css';
+import LinkButton from '../../../LinkButton';
 
 const stars = () => {
     const wH = window.innerHeight
@@ -30,8 +31,7 @@ class LauncherButton extends Component{
                 <div className="star comet">
                 {stars()}
                 </div>
-                
-                <button className="launcher-btn">Get Started</button>
+                <LinkButton className="launcher-btn" to='/ChoiceCharacter'>Get Started</LinkButton>
             </div>
 
             )

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ButtonAudio from './ButtonAudio/ButtonAudio';
 import ButtonLanguage from './ButtonLanguage/ButtonLanguage';
-import '../../Grid.css';
+import '../../../Grid.css';
 import './LauncherSettings.css';
 
 class LauncherSetting extends Component{
