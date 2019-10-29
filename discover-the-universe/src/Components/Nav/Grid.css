@@ -12,6 +12,9 @@
     display:flex;
     align-items: center;
 }
+.height{
+    height: 3rem;
+}
 
 @media screen and (max-width:500px){
     .mob-0{display: none;}

@@ -2,8 +2,35 @@
 
 h3{
     font-family: 'Lobster', cursive;
-    font-size: 25px;
-    text-align: center;
     width: 100%;
 }
 
+.center {
+    margin: 0 auto;
+}
+@media screen and (max-width:500px){
+
+    .mob-font-title{
+        font-size: 25px;
+        text-align: right;
+    }
+
+}
+
+@media screen and (min-width:500px) and (max-width:1023px){
+
+    .tab-font-title{
+        font-size: 35px;
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width:1023px) {
+
+    .tab-font-title{
+        font-size: 40px;
+        text-align: center;
+    }
+
+}

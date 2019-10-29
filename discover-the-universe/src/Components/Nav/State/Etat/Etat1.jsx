@@ -16,7 +16,7 @@ class Etat1 extends React.Component {
                 <img 
                 src="/images/mars.png " 
                 alt=""
-                className="img2 img1"
+                className="imgplanet img1"
                 />
             </div>
         );

@@ -21,7 +21,7 @@ class Logo extends React.Component {
             <img
             src={logo.url}
             alt={logo.character}
-            className="img2"
+            className="img2 "
             ></img>
             </div>
         );
