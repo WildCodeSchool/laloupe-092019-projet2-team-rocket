@@ -8,10 +8,10 @@ class Title extends React.Component {
     }
     render() {
         return (
-            <div className="mob-12">
+            <div className="mob-12 tab-12 center">
                     <h3
                         alt="Title"
-                        className=""
+                        className="mob-font-title tab-font-title dsk-font-title"
                     >Discovery The Universe</h3>
                 </div>
         );

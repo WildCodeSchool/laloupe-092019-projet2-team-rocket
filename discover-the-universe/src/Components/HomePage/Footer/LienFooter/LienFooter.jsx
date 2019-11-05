@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Lienfooter.css';
 import '../../../../Grid.css';
+import Logo from '../../Nav/Logo/Logo';
 
 
 
@@ -8,8 +9,9 @@ class LienFooter extends Component {
     render() {
         return (
             <div className="footer mob-12 tab-12 dsk-12 ">
+                
                     <div className="row justify-content-center mob-12 tab-4 dsk-4">
-                        <img className="logo" src="/images/logo.svg"/>
+                       <Logo />
                     </div>
 
                     <div className="justify-content-center align-center mob-12 tab-4 dsk-4">

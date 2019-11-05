@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
+import NavBar from '../HomePage/Nav/NavBar';
 
 class ChoicePlanets extends Component{
     render(){
         return(
             <div>
-                <h1>Je suis sur la page ChoicePlanets</h1>
+               <NavBar />
             </div>
         )
     }
