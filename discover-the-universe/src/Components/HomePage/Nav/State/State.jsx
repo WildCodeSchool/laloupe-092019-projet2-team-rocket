@@ -9,21 +9,21 @@ import './State.css';
 function State() {
     
     return(
-        <div className="row align-center">
-            <div className="mob-2"></div>
-            <div className="mob-2 align-center">    
+        <div className="row align-center margin">
+            <div className="mob-2 tab-2 dsk-0 height"></div>
+            <div className="mob-2 tab-2 dsk-2 align-center">    
             <Etat1 />
             </div>
-            <div className="mob-2 align-center">
+            <div className="mob-2 tab-2 dsk-2 align-center">
             <Etat2 />
             </div>
-            <div className="mob-2 align-center">
+            <div className="mob-2 tab-2 dsk-2 align-center">
             <Etat3 />
             </div>
-            <div className="mob-2 align-center">
+            <div className="mob-2 tab-2 dsk-2 align-center">
             <Etat4 />
             </div>
-            <div className="mob-2"></div>
+            <div className="mob-2 tab-2 dsk-0 height"></div>
         </div>
     );
 }
