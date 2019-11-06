@@ -9,14 +9,14 @@ function NavBar() {
 
     return (
         <div className="row nav">
-            <div className="mob-3 align-center">
+            <div className="mob-3 tab-3 dsk-2 align-center">
                 <Logo />
             </div>
-            <div className="mob-8 align-center">
+            <div className="mob-8 tab-8 dsk-4 align-center">
                 <Title />
             </div>
-            <div className="mob-1"></div>
-            <div className="mob-12">
+            <div className="mob-1 tab-8 dsk-0"></div>
+            <div className="mob-12 tab-12 dsk-6">
                 <State />
             </div>
         </div>

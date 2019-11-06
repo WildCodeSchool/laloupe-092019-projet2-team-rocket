@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './ButtonAudio.css';
 import '../../../../Grid.css';
+import { connect } from 'react-redux';
 
 class ButtonAudio extends Component{
     constructor(props){
@@ -11,18 +12,34 @@ class ButtonAudio extends Component{
         return(
             <div>
                 <div className="section-audio">
-                    <p className="label-audio">AUDIO</p>
-                    <label class="activate btn-radio"> ACTIVATE </label>
-                    <input type="radio" name="audio" className="btn-audio" checked/>
-                    <span class="slider round"></span>
+                    <div className="activate">
+                        <img className="audio-img" src="/images/audio.png"/>
+                        <div>
+                            <label className="activate btn-radio"> {this.props.lang.audio[0]} </label>
+                            <input type="radio" name="audio" className="btn-audio"/>
+                            <span className="slider round"></span>      
+                        </div>
+  
+                    </div>
 
-                    <label class="desactivate btn-radio"> DESACTIVATE </label>
-                    <input type="radio" name="audio" className="btn-audio"/>
-                    <span class="slider round"></span>
+                    <div className="desactivate">
+                        <label className="desactivate btn-radio">{this.props.lang.audio[1]} </label>
+                        <input type="radio" name="audio" className="btn-audio"/>
+                        <span className="slider round"></span>
+                    </div>
+
+
+
                 </div> 
             </div>
         )
     }
 }
 
-export default ButtonAudio;
+const mapStateToProps = state => {
+    return ({
+        lang: state.lang
+    })
+};
+
+export default connect(mapStateToProps)(ButtonAudio);
