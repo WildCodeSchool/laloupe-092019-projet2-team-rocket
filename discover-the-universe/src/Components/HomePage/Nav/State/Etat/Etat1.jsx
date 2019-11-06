@@ -14,9 +14,9 @@ class Etat1 extends React.Component {
             className="etat1 etat"
             >
                 <img 
-                src="/images/mars.png " 
+                src="/images/asteroid.png " 
                 alt=""
-                className="img2 img1"
+                className="imgplanet img1"
                 />
             </div>
         );
