@@ -4,8 +4,7 @@ import NavBar from '../HomePage/Nav/NavBar';
 import "./ChoiceCharacter.css";
 import "../../Grid.css";
 import { connect } from 'react-redux';
-
-
+import {SELECT_CHARACTER} from '../actionTypes';
 
 
 class ChoiceCharacter extends Component {
@@ -14,32 +13,32 @@ class ChoiceCharacter extends Component {
 
         this.state = {
             userInput: '',
-            character:'/images/astronaute1.png'
+            currentCharacter: ''
         }
     }
 
-    handleChange = (event)  => {
+    handleChange = (event) => {
         this.setState({
             userInput: event.target.value
         })
     }
 
-    handleCharcterSelection = (event) =>{
+    handleCharcterSelection = (event) => {
+        let character = event.target.value;
         this.setState({
-            character:event.target.value
+            currentCharacter: character
         })
+        
+        this.props.dispatch({type:SELECT_CHARACTER.type, character});
     }
 
-    handleValideCharacter = () => {
-        /*this.props.dispatch(action);*/
-        console.log("character validé");
-    }
+
+
 
 
     render() {
-        console.log("nickName : ",this.state.userInput);
-        console.log("character : ",this.state.character);
-        console.log(this.props.lang);
+
+        
         return (
             <div>
                 <div className="CharacterPage">
@@ -72,7 +71,7 @@ class ChoiceCharacter extends Component {
 
                     <div className="btn-next">
                         {
-                            this.state.userInput != '' ? <p><LinkButton onClick={this.handleValideCharacter} className='btn btn-warning btn-ChoiceCharacter' to='/ChoicePlanets' character={this.state.character}>{this.props.lang.choiceCharacter[1]}</LinkButton></p> : ''
+                            this.state.userInput != '' ? <p><LinkButton className='btn btn-warning btn-ChoiceCharacter' to='/ChoicePlanets'>{this.props.lang.choiceCharacter[1]}</LinkButton></p> : ''
                         }
                     </div>
 
@@ -90,10 +89,11 @@ class ChoiceCharacter extends Component {
 
 
 const mapStateToProps = state => {
+
     return ({
-        lang: state
+        lang: state.lang, 
+        currentCharacter: state.currentCharacter
     })
 };
-
 
 export default connect(mapStateToProps)(ChoiceCharacter);

@@ -1,19 +1,30 @@
 import React, {Component} from 'react';
 import NavBar from '../HomePage/Nav/NavBar';
+import { connect } from 'react-redux';
 
 class ChoicePlanets extends Component{
-    constructor(props){
-        super(props);
+    constructor(){
+        super();
     }
     render(){
-        console.log(this.props.character);
+        console.log(this.props.currentCharacter);
         return(
             <div>
                <NavBar />
-               <img src={`"${this.props.character}"`}/>
+               <img src={`${this.props.currentCharacter}`}/>
             </div>
         )
     }
 }
 
-export default ChoicePlanets;
+const mapStateToProps = state => {
+
+    return ({
+        lang: state.lang, 
+        currentCharacter: state.currentCharacter
+    })
+};
+
+
+export default connect(mapStateToProps)(ChoicePlanets);
+

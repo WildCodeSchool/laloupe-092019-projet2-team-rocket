@@ -42,7 +42,7 @@ class ButtonLanguage extends Component {
 
 const mapStateToProps = state => {
     return ({
-        lang: state
+        lang: state.lang
     })
 };
 

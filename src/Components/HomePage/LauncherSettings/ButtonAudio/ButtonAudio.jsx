@@ -38,7 +38,7 @@ class ButtonAudio extends Component{
 
 const mapStateToProps = state => {
     return ({
-        lang: state
+        lang: state.lang
     })
 };
 

@@ -24,10 +24,10 @@ class LienFooter extends Component {
 
                     <div className="justify-content-center align-center mob-12 tab-4 dsk-4">
                         <ul className="row icon">
-                            <li><i class="fab fa-facebook fa-2x"></i></li>
-                            <li><i class="fab fa-twitter fa-2x"></i></li>
-                            <li><i class="fab fa-instagram fa-2x"></i></li>
-                            <li><i class="fab fa-pinterest fa-2x"></i></li>
+                            <li><i className="fab fa-facebook fa-2x"></i></li>
+                            <li><i className="fab fa-twitter fa-2x"></i></li>
+                            <li><i className="fab fa-instagram fa-2x"></i></li>
+                            <li><i className="fab fa-pinterest fa-2x"></i></li>
                         </ul>
                     </div>
             </div>
@@ -38,7 +38,7 @@ class LienFooter extends Component {
 
 const mapStateToProps = state => {
     return ({
-        lang: state
+        lang: state.lang
     })
 };
 

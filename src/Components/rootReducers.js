@@ -1,10 +1,8 @@
 
-import { SET_ENGLISH, SET_FRENCH, SET_CHARACTER } from './actionTypes';
+import { SET_ENGLISH, SET_FRENCH, SELECT_CHARACTER } from './actionTypes';
 
 const STORE = {
-    character:{
-        selected:["",""]
-    },
+    currentCharacter: "/images/astronaute1.png",
     EN: {
         lang:'EN',
         planets:[],
@@ -25,25 +23,29 @@ const STORE = {
 
 const rootReducer = (state, action) => {
 
+    let lang = ( state == undefined  ) ? STORE.EN : state.lang;
+    let currentCharacter = STORE.currentCharacter;
+
+
     switch (action.type) {
-        case SET_FRENCH.type:
-            state = STORE.FR;
-            break;
+        case SET_FRENCH.type: lang = STORE.FR; break;
+        case SET_ENGLISH.type: lang = STORE.EN; break;
 
-        case SET_ENGLISH.type:
-            state = STORE.EN;
-            break;
-
-        case SET_CHARACTER.type:
-            console.log(SET_CHARACTER.type);
+        case SELECT_CHARACTER.type:
+            STORE.currentCharacter = action.character;
+            currentCharacter = action.character;
             break;
 
         default:
-            state = STORE.EN;
+            lang = STORE.EN;
+            console.log("DEFAUT");
             break;
     }
-
-    return state;
+    
+    return {
+        lang: lang, 
+        currentCharacter: currentCharacter
+    };
 
 }
 
