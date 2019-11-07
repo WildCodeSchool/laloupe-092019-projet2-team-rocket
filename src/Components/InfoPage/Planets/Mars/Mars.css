@@ -1,0 +1,23 @@
+
+
+
+@media screen and (max-width:500px){
+    .mars{
+        background-color: #111111;
+    }
+    .font-avatar{
+
+    }
+    
+}
+
+@media screen and (min-width:500px) and (max-width:1023px){
+
+
+}
+
+@media screen and (min-width:1023px) {
+
+
+
+}
