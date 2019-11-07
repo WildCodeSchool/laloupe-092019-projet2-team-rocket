@@ -72,10 +72,10 @@ class ChoicePlanets extends Component {
                         <img className="choicePlanetAstronaute" src={`${this.props.currentCharacter}`} />
                     </div>
                     <div className="planets">
-                        <div className="planet1"><LinkButton className="btn-planet1" to="/"> <img className="pics-planet" src={`${this.state.mars}`} alt="mars" /></LinkButton></div>
-                        <div className="planet1"><LinkButton className="btn-planet1" to="/"> <img className="pics-planet" src={`${this.state.mars}`} alt="mars" /></LinkButton></div>
-                        <div className="planet1"><LinkButton className="btn-planet1" to="/"> <img className="pics-planet" src={`${this.state.mars}`} alt="mars" /></LinkButton></div>
-                        <div className="planet1"><LinkButton className="btn-planet1" to="/"> <img className="pics-planet" src={`${this.state.mars}`} alt="mars" /></LinkButton></div>
+                        <div className="planet1"><LinkButton className="btn-planet1" to="/Mars"> <img className="pics-planet" src={`${this.state.mars}`} alt="mars" /></LinkButton></div>
+                        <div className="planet1"><LinkButton className="btn-planet1" to="/Venus"> <img className="pics-planet" src={`${this.state.venus}`} alt="mars" /></LinkButton></div>
+                        <div className="planet1"><LinkButton className="btn-planet1" to="/Jupiter"> <img className="pics-planet" src={`${this.state.jupiter}`} alt="mars" /></LinkButton></div>
+                        <div className="planet1"><LinkButton className="btn-planet1" to="/Uranus"> <img className="pics-planet" src={`${this.state.uranus}`} alt="mars" /></LinkButton></div>
 
                     </div>
                 </div>
