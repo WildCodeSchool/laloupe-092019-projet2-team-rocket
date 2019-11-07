@@ -1,0 +1,27 @@
+.pics-planet{
+    object-fit: cover;
+    object-position: 100% 0;
+    width:30%;
+    border-radius: 10%;
+    margin-bottom: 2rem;
+}
+
+.block{
+    display:flex;
+    height:800px;
+    justify-items: space-between;
+}
+
+.planets{
+    display:flex;
+    flex-direction: column;
+    height: 300px;
+}
+
+.choicePlanetAstronaute{
+    width:100%;
+}
+
+.btn-planet1{
+    width:50%;
+}
