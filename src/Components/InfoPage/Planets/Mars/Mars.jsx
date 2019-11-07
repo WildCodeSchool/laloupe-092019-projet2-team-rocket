@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './Mars.css'
-import '../../../Nav/Grid.css';
+import '../../../../Grid.css'
 const txtplanets = ``;
 
 class Mars extends React.Component {
@@ -54,12 +54,9 @@ class Mars extends React.Component {
                 <div className="mob-12 ">
                     <img className="mob-12 font-avatar" src="https://mars.nasa.gov/system/resources/detail_files/8727_PIA02406-full2.jpg" alt="font-mars" />
                     {this.state.mars.length === 0 ? <p>loading</p> : <p className="bull" >Welcome to {this.state.mars.name}</p>}
-                    <img className="mob-12" src="./astronaute3.png" alt="avatar" />
+                    <img className="mob-12" src="./images/astronaute3.png" alt="avatar" />
                 </div>
-
-
-                {/* <Avantar /> */}
-                {/* <p>{this.mars.charater}</p> */}
+                {/* <p></p> */}
             </div>
         );
     }

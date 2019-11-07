@@ -3,7 +3,7 @@ import Home from './Components/HomePage/Home';
 import {Switch, Route} from 'react-router-dom';
 import ChoiceCaracter from './Components/ChoiceCharacter/ChoiceCaracter';
 import ChoicePlanets from './Components/ChoicePlanets/ChoicePlanets';
-import InfoPage from './Components/InfoPage/PageInfo/PageInfo';
+import InfoPage from './Components/InfoPage/PageInfo';
 
 class App extends Component{
     render(){
