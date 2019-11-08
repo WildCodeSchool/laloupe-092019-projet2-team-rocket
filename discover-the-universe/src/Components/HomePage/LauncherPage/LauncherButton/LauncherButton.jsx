@@ -22,16 +22,17 @@ class LauncherButton extends Component{
     render(){
         return(
             <div className="container">
-                 <LinkButton className="" to='/ChoiceCharacter'><img className="logo-title forward" src="/images/logo-title.png" /></LinkButton>
+                
                 <img className="earth rotating-earth" src="/images/earth-1.png" />
                 <img className="moon rotating" src="/images/moon.png" />
                 <img className="rocket moveRocket" src="/images/rocketNotFire.png" />
                 <img className="astronaute1 move" src="/images/astronaute.png" />
                 <img className="skyNight" src="/images/skyNight.jpg" />
+                <LinkButton className="btn-linkbutton" to='/ChoiceCharacter'>GET STARTED</LinkButton>
                 <div className="star comet">
                 {stars()}
                 </div>
-               
+                
             </div>
 
             )
