@@ -9,14 +9,16 @@ const STORE = {
         choiceCharacter:["Home","Next"],
         language:["ENGLISH","FRENCH"],
         footer:["About us", "Contact us"],
-        audio: ["ACTIVATE", "DESACTIVATE"]
+        audio: ["ACTIVATE", "DESACTIVATE"],
+        choiceCharacterPlaceholder:["nickname"]
     },
     FR: {
         lang:'FR',
         choiceCharacter:["Accueil","Suivant"],
         language:["ANGLAIS","FRANCAIS"],
         footer:["A propos de nous", "Nous contacter"],
-        audio: ["ACTIVER", "DESACTIVER"]
+        audio: ["ACTIVER", "DESACTIVER"],
+        choiceCharacterPlaceholder:["pseudo"]
     }
 };
 

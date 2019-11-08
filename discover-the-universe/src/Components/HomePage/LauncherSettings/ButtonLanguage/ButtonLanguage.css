@@ -1,3 +1,23 @@
 .language-img{
-    width:70%;
+    height:100%;
+    object-fit: contain;
+}
+
+.div-language-img{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:0.5rem;
+}
+
+@media screen and (max-width:500px){
+    .btn-radio{
+        font-size: 1rem;
+    }
+
+
+    .language-img{
+        width:50%;
+    }
+
 }

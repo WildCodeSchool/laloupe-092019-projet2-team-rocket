@@ -1,37 +1,40 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './ButtonAudio.css';
 import '../../../../Grid.css';
 import { connect } from 'react-redux';
 
-class ButtonAudio extends Component{
-    constructor(props){
+class ButtonAudio extends Component {
+    constructor(props) {
         super(props);
 
     }
-    render(){
-        return(
-            <div>
+    render() {
+        return (
+            <>
                 <div className="section-audio">
                     <div className="activate">
-                        <img className="audio-img" src="/images/audio.png"/>
-                        <div>
-                            <label className="activate btn-radio"> {this.props.lang.audio[0]} </label>
-                            <input type="radio" name="audio" className="btn-audio"/>
-                            <span className="slider round"></span>      
+                        <div className="div-audio-img">
+                            <img className="audio-img" src="/images/audio.png" />
                         </div>
-  
+
+                        <div className="radio-activate">
+                            <label className="activate btn-radio"> {this.props.lang.audio[0]} </label>
+                            <input type="radio" name="audio" className="btn-audio" />
+                            <span className="slider round"></span>
+                        </div>
+
                     </div>
 
-                    <div className="desactivate">
+                    <div className="radio-desactivate">
                         <label className="desactivate btn-radio">{this.props.lang.audio[1]} </label>
-                        <input type="radio" name="audio" className="btn-audio"/>
+                        <input type="radio" name="audio" className="btn-audio" />
                         <span className="slider round"></span>
                     </div>
 
 
 
-                </div> 
-            </div>
+                </div>
+            </>
         )
     }
 }

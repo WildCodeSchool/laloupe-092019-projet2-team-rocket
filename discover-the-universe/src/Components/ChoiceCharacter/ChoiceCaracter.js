@@ -48,7 +48,7 @@ class ChoiceCharacter extends Component {
                 <div className="container-elements mob-6 tab-6 dsk-6">
                     <p className="par">
                         <input
-                            placeholder="Nickname"
+                            placeholder={this.props.lang.choiceCharacterPlaceholder[0]}
                             value={this.state.userInput}
                             onChange={this.handleChange.bind(this)}>
                         </input>
