@@ -4,6 +4,10 @@
     object-fit: contain;
 }
 
+.audio-img{
+    width:50%;
+}
+
 .section-audio{
     margin:0 auto;
 }
@@ -13,6 +17,7 @@
     flex-direction: column;
     align-items: center;
     padding:0.5rem;
+    color:rgb(85, 84, 84);
     font-family: 'Acme', sans-serif;
 }
 
@@ -32,11 +37,12 @@
 
 }
 
-@media screen and (max-width:500px){
-    .btn-radio{
-        font-size: 1rem;
-    }
+.btn-radio{
+    font-size: 1rem;
+}
 
+
+@media screen and (max-width:500px){
 
     .audio-img{
         width:50%;

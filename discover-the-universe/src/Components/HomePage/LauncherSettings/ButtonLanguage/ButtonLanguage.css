@@ -3,6 +3,17 @@
     object-fit: contain;
 }
 
+
+.language-img{
+    width:50%;
+}
+
+.btn-radio{
+    font-size: 1rem;
+    color:rgb(85, 84, 84);
+}
+
+
 .div-language-img{
     display:flex;
     flex-direction: column;
@@ -11,9 +22,6 @@
 }
 
 @media screen and (max-width:500px){
-    .btn-radio{
-        font-size: 1rem;
-    }
 
 
     .language-img{

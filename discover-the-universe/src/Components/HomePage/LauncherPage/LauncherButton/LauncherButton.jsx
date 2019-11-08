@@ -28,10 +28,11 @@ class LauncherButton extends Component{
                 <img className="rocket moveRocket" src="/images/rocketNotFire.png" />
                 <img className="astronaute1 move" src="/images/astronaute.png" />
                 <img className="skyNight" src="/images/skyNight.jpg" />
-                <LinkButton className="btn-linkbutton" to='/ChoiceCharacter'>GET STARTED</LinkButton>
                 <div className="star comet">
                 {stars()}
+                
                 </div>
+                <LinkButton className="launcher-btn" to='/ChoiceCharacter'>Get Started</LinkButton>
                 
             </div>
 

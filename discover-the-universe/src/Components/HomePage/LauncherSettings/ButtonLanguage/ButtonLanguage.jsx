@@ -23,16 +23,16 @@ class ButtonLanguage extends Component {
                         </div>
 
                         <div className="radio-activate">
-                            <label className="activate btn-radio">{this.props.lang.language[0]}</label>
-                            <input onChange={() => this.onChangeLanguage(SET_ENGLISH)} type="radio" name="language" className="btn-language" defaultChecked />
+                            <label className="activate btn-radio">{this.props.lang.language[0]}<input onChange={() => this.onChangeLanguage(SET_ENGLISH)} type="radio" name="language" className="btn-language" defaultChecked /></label>
+                            
                             <span className="slider round"></span>
                         </div>
                     </div>
 
 
                     <div className="radio-desactivate">
-                        <label className="desactivate btn-radio">{this.props.lang.language[1]}</label>
-                        <input onChange={() => this.onChangeLanguage(SET_FRENCH)} type="radio" name="language" className="btn-language" />
+                        <label className="desactivate btn-radio">{this.props.lang.language[1]}<input onChange={() => this.onChangeLanguage(SET_FRENCH)} type="radio" name="language" className="btn-language" /></label>
+                        
                         <span className="slider round"></span>
                     </div>
 
