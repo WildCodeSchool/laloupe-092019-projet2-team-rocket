@@ -4,6 +4,7 @@ import LauncherSettings from './LauncherSettings/LauncherSettings';
 import Footer from './Footer/Footer';
 import Nav from './Nav/NavBar';
 import './HomePage.css';
+import { connect } from 'react-redux';
 
 class Home extends Component{
     constructor(){
@@ -37,7 +38,7 @@ class Home extends Component{
             <div>
                 <Nav/>
                 <div className="div-setting">
-                    <button className="btn-setting" onClick={this.handleClickSetting}>SETTING</button> 
+                    <button className="btn-setting" onClick={this.handleClickSetting}>{this.props.lang.setting[0]}</button> 
                 </div>
                     {this.state.btnSetting ? <LauncherSettings />:""}
                 
@@ -49,4 +50,10 @@ class Home extends Component{
 }
 
 
-export default Home;
+const mapStateToProps = state => {
+    return ({
+        lang: state.lang
+    })
+};
+
+export default connect(mapStateToProps)(Home);

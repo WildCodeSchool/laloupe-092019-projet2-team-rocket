@@ -8,6 +8,8 @@ const STORE = {
         planets:[],
         choiceCharacter:["Home","Next"],
         language:["ENGLISH","FRENCH"],
+        setting:["Click here to access the settings"],
+        launcherButton:["Get Started"],
         footer:["About us", "Contact us"],
         audio: ["ACTIVATE", "DESACTIVATE"],
         choiceCharacterPlaceholder:["nickname"]
@@ -16,6 +18,8 @@ const STORE = {
         lang:'FR',
         choiceCharacter:["Accueil","Suivant"],
         language:["ANGLAIS","FRANCAIS"],
+        setting:["Cliquez ici pour accéder aux paramètres"],
+        launcherButton:["Commencer"],
         footer:["A propos de nous", "Nous contacter"],
         audio: ["ACTIVER", "DESACTIVER"],
         choiceCharacterPlaceholder:["pseudo"]

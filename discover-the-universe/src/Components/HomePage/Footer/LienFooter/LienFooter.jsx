@@ -12,7 +12,7 @@ class LienFooter extends Component {
             <div className="footer mob-12 tab-12 dsk-12 ">
                 
                     <div className="row justify-content-center mob-12 tab-4 dsk-4">
-                       <Logo />
+                       <img className="logo-footer" src="/images/logo-title.png"></img>
                     </div>
 
                     <div className="justify-content-center align-center mob-12 tab-4 dsk-4">

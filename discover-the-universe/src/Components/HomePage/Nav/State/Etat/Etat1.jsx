@@ -5,19 +5,21 @@ import './Etat.css';
 class Etat1 extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            contextUrl:"http://localhost:3000/"
+        }
     }
     render() {
+        console.log(window.location.href);
         return ( 
-            <div
-            alt="1"
-            className="etat1 etat"
-            >
-                <img 
-                src="/images/asteroid.png " 
-                alt=""
-                className="imgplanet img1"
-                />
+            <div alt="1" className="etat1 etat">
+                {
+                    window.location.href === this.state.contextUrl
+                ?
+                    <img src="/images/mars.png " alt="" className="imgplanet img1"/>
+                :
+                    <img src="/images/asteroid.png " alt="" className="imgplanet img1"/>
+                }
             </div>
         );
     }

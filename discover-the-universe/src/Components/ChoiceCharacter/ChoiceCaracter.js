@@ -76,9 +76,9 @@ class ChoiceCharacter extends Component {
                     </div>
 
                     <div className="btn">
-                        <a href="/">
-                            <button className="btn-Choice" type="button">{this.props.lang.choiceCharacter[0]}</button>
-                        </a>
+
+                        <LinkButton className="btn-Choice" type="button" to="/">{this.props.lang.choiceCharacter[0]}</LinkButton>
+
                     </div>
                 </div>
             </div>
