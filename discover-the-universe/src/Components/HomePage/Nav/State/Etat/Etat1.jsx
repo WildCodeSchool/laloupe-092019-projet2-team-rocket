@@ -10,7 +10,6 @@ class Etat1 extends React.Component {
         }
     }
     render() {
-        console.log(window.location.href);
         return ( 
             <div alt="1" className="etat1 etat">
                 {

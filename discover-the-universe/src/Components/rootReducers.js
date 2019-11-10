@@ -6,7 +6,7 @@ const STORE = {
     EN: {
         lang:'EN',
         planets:[],
-        choiceCharacter:["Home","Next"],
+        choiceCharacter:["Home","Next","Choice your nickname", "Choice your character"],
         language:["ENGLISH","FRENCH"],
         setting:["Click here to access the settings"],
         launcherButton:["Get Started"],
@@ -16,7 +16,7 @@ const STORE = {
     },
     FR: {
         lang:'FR',
-        choiceCharacter:["Accueil","Suivant"],
+        choiceCharacter:["Accueil","Suivant","Indique ton pseudo", "Selectionne ton personnage"],
         language:["ANGLAIS","FRANCAIS"],
         setting:["Cliquez ici pour accéder aux paramètres"],
         launcherButton:["Commencer"],
@@ -38,13 +38,13 @@ const rootReducer = (state, action) => {
         case SET_ENGLISH.type: lang = STORE.EN; break;
 
         case SELECT_CHARACTER.type:
+            
             STORE.currentCharacter = action.character;
             currentCharacter = action.character;
             break;
 
         default:
             lang = STORE.EN;
-            console.log("DEFAUT");
             break;
     }
     

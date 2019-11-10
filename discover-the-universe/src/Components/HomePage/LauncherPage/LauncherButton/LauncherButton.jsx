@@ -22,7 +22,7 @@ const stars = () => {
 class LauncherButton extends Component{
     render(){
         return(
-            <div className="container">
+            <div className="container-page">
                 
                 <img className="earth rotating-earth" src="/images/earth-1.png" />
                 <img className="moon rotating" src="/images/moon.png" />

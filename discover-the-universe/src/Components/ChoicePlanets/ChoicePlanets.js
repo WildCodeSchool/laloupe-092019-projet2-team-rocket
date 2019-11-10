@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import NavBar from '../HomePage/Nav/NavBar';
 import { connect } from 'react-redux';
 import './ChoicePlanets.css';
 import LinkButton from '../LinkButton';
+import SliderPlanets from './SliderPlanets';
+
 
 class ChoicePlanets extends Component {
     constructor() {
@@ -20,6 +22,8 @@ class ChoicePlanets extends Component {
         this.getVenus();
         this.getJupiter();
         this.getUranus();
+
+        let planets = this.state.mars
     }
 
     getMars() {
@@ -28,7 +32,7 @@ class ChoicePlanets extends Component {
             .then((data) => {
                 this.setState({
                     mars: data.collection.items[88].links[0].href
-                }, console.log(data.collection.items[54].links[0].href))
+                })
             })
     }
 
@@ -63,11 +67,10 @@ class ChoicePlanets extends Component {
     }
 
     render() {
-        console.log(this.props.currentCharacter);
         return (
-            <div>
+            <Fragment>
                 <NavBar />
-                <div className="container block">
+                {/*<div className="container block">
                     <div className="astronaute">
                         <img className="choicePlanetAstronaute" src={`${this.props.currentCharacter}`} />
                     </div>
@@ -76,11 +79,10 @@ class ChoicePlanets extends Component {
                         <div className="planet1"><LinkButton className="btn-planet1" to="/"> <img className="pics-planet" src={`${this.state.mars}`} alt="mars" /></LinkButton></div>
                         <div className="planet1"><LinkButton className="btn-planet1" to="/"> <img className="pics-planet" src={`${this.state.mars}`} alt="mars" /></LinkButton></div>
                         <div className="planet1"><LinkButton className="btn-planet1" to="/"> <img className="pics-planet" src={`${this.state.mars}`} alt="mars" /></LinkButton></div>
-
                     </div>
-                </div>
-
-            </div>
+                </div>*/}
+                <SliderPlanets planets={this.state}/>
+            </Fragment>
         )
     }
 }

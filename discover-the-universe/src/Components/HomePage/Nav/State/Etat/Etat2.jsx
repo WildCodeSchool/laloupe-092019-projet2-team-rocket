@@ -15,7 +15,7 @@ class Etat2 extends React.Component {
                 {
                     window.location.href === this.state.contextUrl
                 ?
-                    <img src="/images/mars.png " alt="" className="imgplanet img1"/>
+                    <img src="/images/moon.png " alt="" className="imgplanet img1"/>
                 :
                     <img src="/images/asteroid.png " alt="" className="imgplanet img1"/>
                 }

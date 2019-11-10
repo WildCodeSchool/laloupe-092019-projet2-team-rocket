@@ -11,7 +11,7 @@ function NavBar() {
     return (
         <Fragment>
 
-        <div className="row nav">
+        <div className="nav">
             <div className="mob-3 tab-3 dsk-2 align-center">
                 <LinkButton className="LinkButton-logo-NavBar" to="/"><Logo /></LinkButton>
             </div>
