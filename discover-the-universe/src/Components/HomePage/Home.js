@@ -6,6 +6,7 @@ import Nav from './Nav/NavBar';
 import './HomePage.css';
 import { connect } from 'react-redux';
 
+
 class Home extends Component{
     constructor(){
         super();
@@ -40,7 +41,6 @@ class Home extends Component{
                     <button className="btn-setting" onClick={this.handleClickSetting}>{this.props.lang.setting[0]}</button> 
                 </div>
                     {this.state.btnSetting ? <LauncherSettings />:""}
-                
                 <LauncherPage />
                 <Footer />
             </div>

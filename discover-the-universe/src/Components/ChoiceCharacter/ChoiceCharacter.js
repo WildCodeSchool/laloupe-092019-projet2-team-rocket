@@ -54,7 +54,7 @@ class ChoiceCharacter extends Component {
                         <p className="input-name ">
                             <input
                                 placeholder={this.props.lang.choiceCharacterPlaceholder[0]}
-                                value={this.state.userInput}
+                                value={this.state.userInput} required
                                 onChange={this.handleChange.bind(this)}>
                             </input>
                         </p>
@@ -75,6 +75,7 @@ class ChoiceCharacter extends Component {
                             <LinkButton className='btn btn-success btn-ChoiceCharacter' to='/ChoicePlanets'>{this.props.lang.choiceCharacter[1]}</LinkButton>
                             :
                             <LinkButton className='btn btn-warning btn-ChoiceCharacter' to='/ChoiceCharacter'>{this.props.lang.choiceCharacter[1]}</LinkButton>
+                            
                         }
                     </div>
                 </div>

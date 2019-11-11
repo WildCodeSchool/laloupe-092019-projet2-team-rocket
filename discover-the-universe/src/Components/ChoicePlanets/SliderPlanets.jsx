@@ -1,86 +1,127 @@
-import React, { useState } from 'react';
-import {Carousel,CarouselItem,CarouselControl,CarouselIndicators,CarouselCaption} from 'reactstrap';
+import React, { useState, Fragment } from 'react';
+import NavBar from '../HomePage/Nav/NavBar';
 import { connect } from 'react-redux';
+import {Carousel,CarouselItem,CarouselControl,CarouselIndicators,CarouselCaption} from 'reactstrap';
+import LinkButton from '../LinkButton';
+import {SELECT_PLANET} from '../actionTypes';
 
-const items = [
-  {
-    src: '1',
-    altText: 'Slide 1',
-    caption: 'Slide 1'
-  },
-  {
-    src: '2',
-    altText: 'Slide 2',
-    caption: 'Slide 2'
-  },
-  {
-    src: '3',
-    altText: 'Slide 3',
-    caption: 'Slide 3'
-  }
-  ,
-  {
-    src: '4',
-    altText: 'Slide 4',
-    caption: 'Slide 4'
-  }
-];
 
-const SliderPlanets = ({planets}) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [animating, setAnimating] = useState(false);
-
-  const next = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
-    setActiveIndex(nextIndex);
+class Sliderclass extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      activeIndex:0,
+      setActiveIndex:0
+    }
+    
   }
 
-  const previous = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
-    setActiveIndex(nextIndex);
+  currentIndex = 0;
+  
+
+  next = () => {
+    if (this.animating) return;
+    let activeIndex = this.state.activeIndex;
+    const nextIndex = activeIndex === this.props.planets.length - 1 ? 0 : activeIndex + 1;
+    this.setState({
+      setActiveIndex:nextIndex,
+      activeIndex:nextIndex,
+    })
+    this.currentIndex = nextIndex;
   }
 
-  const goToIndex = (newIndex) => {
-    if (animating) return;
-    setActiveIndex(newIndex);
+  previous = () => {
+    if (this.animating) return;
+    let activeIndex = this.state.activeIndex;
+    const nextIndex = activeIndex === 0 ? this.props.planets.length - 1 : activeIndex - 1;
+    this.setState({
+      setActiveIndex:nextIndex,
+      activeIndex:nextIndex,
+    })
+    this.currentIndex = nextIndex;
   }
 
-  const slides = items.map((item) => {
+  goToIndex = () => {
+    if (this.animating) return;
+    let activeIndex = this.state.activeIndex;
+    const nextIndex = activeIndex === 0 ? this.props.planets.length - 1 : activeIndex - 1;
+    this.setState({
+      setActiveIndex:nextIndex,
+      activeIndex:nextIndex,
+    })
+  }
+
+
+  slides = this.props.planets.map((item) => {
     return (
       <CarouselItem
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
+      onExiting={this.setState({setAnimating:true})}
+      onExited={this.setState({setAnimating:false})}
         key={item.src}
       >
         <img src={item.src} alt={item.altText} />
-        <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+        <CarouselCaption captionText={item.caption} captionHeader={item.caption}  />
       </CarouselItem>
     );
   });
 
-   
+  componentDidMount(){
+    this.currentPlanet();
+  }
 
-  return (
-    <Carousel activeIndex={activeIndex} next={next} previous={previous}>
-      <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-      {slides}
-      <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-      <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-    </Carousel>
-  );
+componentDidUpdate(){
+    this.currentPlanet();
+  }
+
+  currentPlanet = () => {
+
+    let planet = this.props.planets[this.currentIndex].infos
+    this.props.dispatch({type:SELECT_PLANET.type, planet});
+    console.log("je suis dans ma fonction currentPlanet : " , this.props.currentPlanet.id);
+  }
+
+  render(){
+    console.log("je suis apres le render : currentPlanet : " , this.props.currentPlanet);
+    
+    
+    return (
+      <Fragment>
+          {this.currentPlanet()}
+          <NavBar />
+          <div className="">
+            <h3>{this.props.lang.choicePlanet[0]}</h3>
+            <h5>{this.props.lang.choicePlanet[0]}</h5>
+              <div className="carousel-planet">
+                <Carousel activeIndex={this.state.activeIndex} next={this.next} previous={this.previous} interval={false}>
+              
+                {this.slides}
+
+                <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+                <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+                </Carousel>
+              </div>
+              <div className="buttons-planets">
+              <LinkButton className="btn btn-success btn-ChoiceCharacter" to="/ChoiceCharacter">{this.props.lang.choiceCharacter[4]}</LinkButton>
+              <LinkButton className="btn btn-success btn-ChoiceCharacter" to="/DisplayPlanet">{this.props.lang.choiceCharacter[1]}</LinkButton>
+            </div>
+        </div>
+
+      </Fragment>
+  
+    );
+  }
+
 }
+
 
 const mapStateToProps = state => {
 
   return ({
-      lang: state.lang,
-      currentCharacter: state.currentCharacter
+      lang: state.lang, 
+      currentCharacter: state.currentCharacter,
+      currentPlanet:state.currentPlanet
   })
 };
 
-
-export default connect(mapStateToProps)(SliderPlanets);
-
+export default connect(mapStateToProps)(Sliderclass);
 

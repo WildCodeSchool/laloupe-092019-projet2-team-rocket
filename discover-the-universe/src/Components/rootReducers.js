@@ -1,8 +1,10 @@
 
-import { SET_ENGLISH, SET_FRENCH, SELECT_CHARACTER } from './actionTypes';
+import { SET_ENGLISH, SET_FRENCH, SELECT_CHARACTER, SELECT_PLANET, SELECT_REFERENCE_PLANET_EARTH} from './actionTypes';
 
 const STORE = {
     currentCharacter: "/images/astronaute1.png",
+    earth_reference_infos:null,
+    currentPlanet:{},
     EN: {
         lang:'EN',
         planets:[],
@@ -41,6 +43,8 @@ const rootReducer = (state, action) => {
 
     let lang = ( state == undefined  ) ? STORE.EN : state.lang;
     let currentCharacter = STORE.currentCharacter;
+    let currentPlanet = STORE.currentPlanet;
+    let earth_reference_infos = STORE.earth_reference_infos;
 
 
     switch (action.type) {
@@ -53,14 +57,25 @@ const rootReducer = (state, action) => {
             currentCharacter = action.character;
             break;
 
+        case SELECT_PLANET.type:
+            STORE.currentPlanet = action.planet;
+            /*console.log(action.planet);*/
+            break;
+        
+        case SELECT_REFERENCE_PLANET_EARTH.type:
+            STORE.earth_reference_infos = action.earth;
+            /*console.log(action.earth);*/
+            break;
+
         default:
             lang = STORE.EN;
             break;
     }
-    
     return {
         lang: lang, 
-        currentCharacter: currentCharacter
+        currentCharacter: currentCharacter,
+        currentPlanet: currentPlanet,
+        earth_reference_infos : earth_reference_infos
     };
 
 }
