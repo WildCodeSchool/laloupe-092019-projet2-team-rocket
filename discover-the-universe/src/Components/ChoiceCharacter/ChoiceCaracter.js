@@ -68,6 +68,7 @@ class ChoiceCharacter extends Component {
                     
 
                     <div className="row justify-content-center ">
+                        <LinkButton className="btn btn-success btn-ChoiceCharacter" to="/">{this.props.lang.choiceCharacter[4]}</LinkButton>
                         {
                             this.state.userInput != '' 
                             ? 

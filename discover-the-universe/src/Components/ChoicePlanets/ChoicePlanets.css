@@ -25,3 +25,21 @@
 .btn-planet1{
     width:50%;
 }
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  border-radius: 50%;
+  border: 10px solid #f10c0c;
+
+}
+
+h3{
+    text-align: center;
+}
+
+
+.carousel-planet{
+    width:70%;
+    margin:0 auto;
+}
