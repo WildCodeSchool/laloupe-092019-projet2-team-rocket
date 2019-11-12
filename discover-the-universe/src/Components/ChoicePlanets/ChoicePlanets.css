@@ -1,27 +1,32 @@
-.pics-planet{
-    object-fit: cover;
-    object-position: 100% 0;
-    width:30%;
-    border-radius: 10%;
-    margin-bottom: 2rem;
+
+
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  border-radius: 50%;
+  border: 10px solid #f10c0c;
+
 }
 
-.block{
-    display:flex;
-    height:800px;
-    justify-items: space-between;
+h3,h5{
+    text-align: center;
 }
 
-.planets{
-    display:flex;
-    flex-direction: column;
-    height: 300px;
+
+.carousel-item img{
+    width:70%;
+    margin:0 auto;
 }
 
-.choicePlanetAstronaute{
-    width:100%;
+.buttons-planets{
+    text-align: center;
 }
 
-.btn-planet1{
-    width:50%;
+
+@media screen and (max-width:500px){
+    .carousel-planet{
+        width:100%;
+        margin:0 auto;
+    }
 }

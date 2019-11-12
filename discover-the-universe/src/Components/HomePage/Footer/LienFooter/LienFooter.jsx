@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Lienfooter.css';
 import '../../../../Grid.css';
-import Logo from '../../Nav/Logo/Logo';
+import Title from '../../Nav/Title/Title';
 import { connect } from 'react-redux';
 
 
@@ -12,13 +12,13 @@ class LienFooter extends Component {
             <div className="footer mob-12 tab-12 dsk-12 ">
                 
                     <div className="row justify-content-center mob-12 tab-4 dsk-4">
-                       <Logo />
+                       <h3 className="title-footer">Discovery the universe</h3>
                     </div>
 
                     <div className="justify-content-center align-center mob-12 tab-4 dsk-4">
                         <ul className="list">
-                            <li><a href="">{this.props.lang.footer[0]}</a></li>
-                            <li><a href="">{this.props.lang.footer[1]}</a></li>
+                            <li><a href=""><p className="list-footer">{this.props.lang.footer[0]}</p></a></li>
+                            <li><a href=""><p className="list-footer">{this.props.lang.footer[1]}</p></a></li>
                         </ul>
                     </div>
 

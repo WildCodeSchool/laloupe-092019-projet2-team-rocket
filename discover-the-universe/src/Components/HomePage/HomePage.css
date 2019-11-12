@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Acme&display=swap');
+
+.div-setting{
+    display:flex;
+    justify-content: center;
+}
+
+.btn-setting{
+    width:100%;
+    padding:0.5rem;
+    border:none;
+    color:rgb(85, 84, 84);
+    font-family: 'Acme', sans-serif;
+    font-size: 1rem;
+}

@@ -12,7 +12,7 @@ class Title extends React.Component {
                     <h3
                         alt="Title"
                         className="mob-font-title tab-font-title dsk-font-title"
-                    >Discovery The Universe</h3>
+                    ><span className="title-h3">Discovery The Universe</span></h3>
                 </div>
         );
     }

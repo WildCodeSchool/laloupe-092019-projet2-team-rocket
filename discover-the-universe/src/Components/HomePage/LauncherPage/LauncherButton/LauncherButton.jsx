@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './LauncherButton.css';
 import LinkButton from '../../../LinkButton';
+import { connect } from 'react-redux';
 
 const stars = () => {
     const wH = window.innerHeight
@@ -21,8 +22,8 @@ const stars = () => {
 class LauncherButton extends Component{
     render(){
         return(
-            <div className="container">
-                <img className="logo-title forward" src="/images/logo-title.png" />
+            <div className="container-page">
+                
                 <img className="earth rotating-earth" src="/images/earth-1.png" />
                 <img className="moon rotating" src="/images/moon.png" />
                 <img className="rocket moveRocket" src="/images/rocketNotFire.png" />
@@ -30,12 +31,19 @@ class LauncherButton extends Component{
                 <img className="skyNight" src="/images/skyNight.jpg" />
                 <div className="star comet">
                 {stars()}
+                
                 </div>
-                <LinkButton className="launcher-btn" to='/ChoiceCharacter'>Get Started</LinkButton>
+                <LinkButton className="launcher-btn" to='/ChoiceCharacter'>{this.props.lang.launcherButton[0]}</LinkButton>
             </div>
 
             )
     }
 }
 
-export default LauncherButton;
+const mapStateToProps = state => {
+    return ({
+        lang: state.lang
+    })
+};
+
+export default connect(mapStateToProps)(LauncherButton);

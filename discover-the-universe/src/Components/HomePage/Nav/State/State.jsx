@@ -9,7 +9,7 @@ import './State.css';
 function State() {
     
     return(
-        <div className="row align-center margin">
+        <div className="align-center margin">
             <div className="mob-2 tab-2 dsk-0 height"></div>
             <div className="mob-2 tab-2 dsk-2 align-center">    
             <Etat1 />

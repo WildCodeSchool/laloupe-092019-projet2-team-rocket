@@ -1,7 +1,17 @@
 .nav{
-    background-color: #ffffff;
+    background-color: #fff;
     border-bottom: 2px gainsboro solid;
+    height: 200px;;
 }
 title{
     text-align: center;
+}
+
+.title-h3{
+    color:rgb(56, 56, 56);
+}
+
+.LinkButton-logo-NavBar{
+    background-color: transparent;
+    border:none;
 }

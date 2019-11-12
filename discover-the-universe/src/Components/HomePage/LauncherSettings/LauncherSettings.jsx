@@ -7,7 +7,7 @@ import './LauncherSettings.css';
 class LauncherSetting extends Component{
     render(){
         return(
-            <div className="row section2">
+            <div className="section2">
                 <div className="composant-audio">
                     <ButtonAudio />
                 </div>
