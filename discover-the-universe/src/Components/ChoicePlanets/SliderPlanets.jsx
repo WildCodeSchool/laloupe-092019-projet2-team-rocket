@@ -3,7 +3,7 @@ import NavBar from '../HomePage/Nav/NavBar';
 import { connect } from 'react-redux';
 import {Carousel,CarouselItem,CarouselControl,CarouselIndicators,CarouselCaption} from 'reactstrap';
 import LinkButton from '../LinkButton';
-import {SELECT_PLANET} from '../actionTypes';
+import {SELECT_PLANET, SELECT_PLANET_PICTURE} from '../actionTypes';
 
 
 class Sliderclass extends React.Component{
@@ -67,26 +67,35 @@ class Sliderclass extends React.Component{
 
   componentDidMount(){
     this.currentPlanet();
+   this.currentPlanetPicture();
   }
 
-componentDidUpdate(){
+
+  componentDidUpdate(){
     this.currentPlanet();
+    this.currentPlanetPicture();
   }
-
+  
   currentPlanet = () => {
 
-    let planet = this.props.planets[this.currentIndex].infos
-    this.props.dispatch({type:SELECT_PLANET.type, planet});
-    console.log("je suis dans ma fonction currentPlanet : " , this.props.currentPlanet.id);
+    let planet = this.props.planets[this.currentIndex].infos;
+    this.props.dispatch({type:SELECT_PLANET.type, planet})
+
+    /*console.log("je suis dans ma fonction currentPlanet : " , this.props.currentPlanet.id);*/
+  }
+
+  currentPlanetPicture = () => {
+    let picture = this.props.planets[this.currentIndex].src;
+    this.props.dispatch({type:SELECT_PLANET_PICTURE.type, picture});
   }
 
   render(){
-    console.log("je suis apres le render : currentPlanet : " , this.props.currentPlanet);
-    
+
     
     return (
       <Fragment>
           {this.currentPlanet()}
+          {this.currentPlanetPicture()}
           <NavBar />
           <div className="">
             <h3>{this.props.lang.choicePlanet[0]}</h3>
@@ -119,7 +128,8 @@ const mapStateToProps = state => {
   return ({
       lang: state.lang, 
       currentCharacter: state.currentCharacter,
-      currentPlanet:state.currentPlanet
+      currentPlanet:state.currentPlanet,
+      currentNameCharacter: state.currentNameCharacter
   })
 };
 

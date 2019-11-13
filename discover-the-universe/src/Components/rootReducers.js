@@ -1,14 +1,19 @@
 
-import { SET_ENGLISH, SET_FRENCH, SELECT_CHARACTER, SELECT_PLANET, SELECT_REFERENCE_PLANET_EARTH} from './actionTypes';
+import { SET_ENGLISH, SET_FRENCH,
+     SELECT_CHARACTER, SELECT_PLANET,SELECT_PLANET_PICTURE,
+      SELECT_REFERENCE_PLANET_EARTH,
+      SELECT_NAME_CHARACTER} from './actionTypes';
 
 const STORE = {
     currentCharacter: "/images/astronaute1.png",
+    currentNameCharacter:"",
     earth_reference_infos:null,
     currentPlanet:{},
+    currentPlanetPicture:"",
     EN: {
         lang:'EN',
         planets:[],
-        choiceCharacter:["Home","Next","Choice your nickname", "Choice your character","previous"],
+        choiceCharacter:["Home","Next","Choose your nickname", "Choose your character","previous"],
         language:["ENGLISH","FRENCH"],
         setting:["Click here to access the settings"],
         launcherButton:["Get Started"],
@@ -45,6 +50,8 @@ const rootReducer = (state, action) => {
     let currentCharacter = STORE.currentCharacter;
     let currentPlanet = STORE.currentPlanet;
     let earth_reference_infos = STORE.earth_reference_infos;
+    let currentNameCharacter = STORE.currentNameCharacter;
+    let currentPlanetPicture = STORE.currentPlanetPicture;
 
 
     switch (action.type) {
@@ -61,12 +68,21 @@ const rootReducer = (state, action) => {
             STORE.currentPlanet = action.planet;
             /*console.log(action.planet);*/
             break;
-        
+
+        case SELECT_PLANET_PICTURE.type:
+            STORE.currentPlanetPicture = action.picture;
+            /*console.log(action.picture);*/
+            break;
+    
         case SELECT_REFERENCE_PLANET_EARTH.type:
             STORE.earth_reference_infos = action.earth;
             /*console.log(action.earth);*/
             break;
 
+        case SELECT_NAME_CHARACTER.type:
+            STORE.currentNameCharacter = action.name;
+            /*console.log(action.name);*/
+            break;
         default:
             lang = STORE.EN;
             break;
@@ -75,7 +91,9 @@ const rootReducer = (state, action) => {
         lang: lang, 
         currentCharacter: currentCharacter,
         currentPlanet: currentPlanet,
-        earth_reference_infos : earth_reference_infos
+        earth_reference_infos : earth_reference_infos,
+        currentNameCharacter : currentNameCharacter,
+        currentPlanetPicture : currentPlanetPicture
     };
 
 }
