@@ -4,7 +4,7 @@ import NavBar from '../HomePage/Nav/NavBar';
 import "./ChoiceCharacter.css";
 
 import { connect } from 'react-redux';
-import {SELECT_CHARACTER} from '../actionTypes';
+import {SELECT_CHARACTER,SELECT_NAME_CHARACTER} from '../actionTypes';
 import SliderAvatar from './SliderAvatar';
 
 
@@ -13,30 +13,27 @@ class ChoiceCharacter extends Component {
         super();
 
         this.state = {
-            userInput: '',
-            currentCharacter: ''
+            userInput: ''
         }
     }
 
+    
     handleChange = (event) => {
         this.setState({
             userInput: event.target.value
         })
+        let name = event.target.value;
+        this.props.dispatch({type:SELECT_NAME_CHARACTER.type, name:name});
     }
 
     handleCharcterSelection = (event) => {
         let character = event.target.value;
-        this.setState({
-            currentCharacter: character
-        })
-        
-        this.props.dispatch({type:SELECT_CHARACTER.type, character});
+        this.props.dispatch({type:SELECT_CHARACTER.type, character: character});
     }
 
 
 
     render() {
-
         
         return (
             <Fragment>
@@ -58,6 +55,7 @@ class ChoiceCharacter extends Component {
                                 value={this.state.userInput} required
                                 onChange={this.handleChange.bind(this)}>
                             </input>
+                        
                         </p>
                         </div>
                     </div>

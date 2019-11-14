@@ -23,6 +23,7 @@ const items = [
   },
   {
     src: 'images/astronaute2.png',
+
     altText: 'Slide 4',
     caption: 'Slide 4'
   }
