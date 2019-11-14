@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import {SELECT_CHARACTER} from '../actionTypes';
 
 
-
 const items = [
   {
     src: '/images/astronaute1.png',
@@ -13,7 +12,7 @@ const items = [
     caption: 'Slide 1'
   },
   {
-    src: '/images/astronaute2.png',
+    src: 'https://files.slack.com/files-pri/T6SG2QGG2-FQJAQ4C0P/astrofille.png',
     altText: 'Slide 2',
     caption: 'Slide 2'
   },
@@ -21,8 +20,15 @@ const items = [
     src: '/images/astronaute3.png',
     altText: 'Slide 3',
     caption: 'Slide 3'
+  },
+  {
+    src: 'images/astronaute2.png',
+    altText: 'Slide 4',
+    caption: 'Slide 4'
   }
+ 
 ];
+
 
 
 

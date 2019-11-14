@@ -101,8 +101,8 @@ componentDidUpdate(){
                 </Carousel>
               </div>
               <div className="buttons-planets">
-              <LinkButton className="btn btn-success btn-ChoiceCharacter" to="/ChoiceCharacter">{this.props.lang.choiceCharacter[4]}</LinkButton>
-              <LinkButton className="btn btn-success btn-ChoiceCharacter" to="/DisplayPlanet">{this.props.lang.choiceCharacter[1]}</LinkButton>
+              <LinkButton className="btn btn-info btn-ChoiceCharacter" to="/ChoiceCharacter">{this.props.lang.choiceCharacter[4]}</LinkButton>
+              <LinkButton className="btn btn-info btn-ChoiceCharacter" to="/DisplayPlanet">{this.props.lang.choiceCharacter[1]}</LinkButton>
             </div>
         </div>
 
