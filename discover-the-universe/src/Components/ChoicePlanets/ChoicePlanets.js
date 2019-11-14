@@ -2,207 +2,217 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './ChoicePlanets.css';
 import SliderPlanets from './SliderPlanets';
-import {SELECT_REFERENCE_PLANET_EARTH} from '../actionTypes';
+import { SELECT_REFERENCE_PLANET_EARTH} from '../actionTypes';
 
 
 const items = [
   {
-    src:"",
+    src: "",
     altText: "altText",
     caption: "caption",
     header: "header",
     key: '1',
-    infos:""
+    infos: ""
   },
   {
-    src:"",
+    src: "",
     altText: 'Slide 2',
     caption: 'Slide 2',
     header: 'Slide 2 Header',
     key: '2',
-    infos:""
+    infos: ""
   },
   {
-    src:"",
+    src: "",
     altText: 'Slide 3',
     caption: 'Slide 3',
     header: 'Slide 3 Header',
     key: '3',
-    infos:""
+    infos: ""
   },
   {
-    src:"",
+    src: "",
     altText: 'Slide 3',
     caption: 'Slide 3',
     header: 'Slide 3 Header',
     key: '3',
-    infos:""
+    infos: ""
   }
 ]
 
 const props_planet = ['mars_infos', 'venus_infos',
-                      'jupiter_infos', 'uranus_infos'];
+  'jupiter_infos', 'uranus_infos'];
 
 class ChoicePlanets extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            mars:"",
-            venus:"",
-            jupiter:"",
-            uranus:"",
-            mars_infos:"",
-            venus_infos:"",
-            jupiter_infos:"",
-            uranus_infos:"",
-            earth_infos:""
-        }
-      
+  constructor(props) {
+    super(props);
+    this.state = {
+      mars: "",
+      venus: "",
+      jupiter: "",
+      uranus: "",
+      mars_infos: "",
+      venus_infos: "",
+      jupiter_infos: "",
+      uranus_infos: "",
+      earth_infos: ""
     }
 
-    componentDidMount() {
-      this.getVenus();
-      this.getMars();
-      this.getJupiter();
-      this.getUranus();
-      this.getMarsInfos();
-      this.getVenusInfos();
-      this.getJupiterInfos();
-      this.getUranusInfos();
-      this.getEarthInfos();
-    }
-
-    getMars() {
-        fetch('https://images-api.nasa.gov/search?q=mars')
-            .then(response => response.json())
-            .then((data) => {
-                this.setState({
-                    mars: data.collection.items[88].links[0].href
-                })
-            })
-    }
-
-    getMarsInfos() {
-      fetch('https://api.le-systeme-solaire.net/rest/bodies/mars')
-          .then(response => response.json())
-          .then((data) => {
-              this.setState({
-                  mars_infos: data
-              })
-          })
   }
 
-    getVenus() {
-        fetch('https://images-api.nasa.gov/search?q=venus')
-            .then(response => response.json())
-            .then((data) => {
-                this.setState({
-                    venus: data.collection.items[28].links[0].href
-                })
-
-            })
-    }
-
-    getVenusInfos() {
-      fetch('https://api.le-systeme-solaire.net/rest/bodies/venus')
-          .then(response => response.json())
-          .then((data) => {
-              this.setState({
-                  venus_infos: data
-              })
-          })
+  componentDidMount() {
+    this.getVenus();
+    this.getMars();
+    this.getJupiter();
+    this.getUranus();
+    this.getMarsInfos();
+    this.getVenusInfos();
+    this.getJupiterInfos();
+    this.getUranusInfos();
+    this.getEarthInfos();
   }
 
-    getJupiter() {
-      fetch('https://images-api.nasa.gov/search?q=jupiter')
-          .then(response => response.json())
-          .then((data) => {
-              this.setState({
-                  jupiter: data.collection.items[60].links[0].href
-              })
-
-          })
+  getMars() {
+    fetch('https://images-api.nasa.gov/search?q=mars')
+      .then(response => response.json())
+      .then((data) => {
+        this.setState({
+          mars: data.collection.items[88].links[0].href
+        })
+      })
   }
 
-  
+  getMarsInfos() {
+    fetch('https://api.le-systeme-solaire.net/rest/bodies/mars')
+      .then(response => response.json())
+      .then((data) => {
+        this.setState({
+          mars_infos: data
+        })
+      })
+  }
+
+  getVenus() {
+    fetch('https://images-api.nasa.gov/search?q=venus')
+      .then(response => response.json())
+      .then((data) => {
+        this.setState({
+          venus: data.collection.items[28].links[0].href
+        })
+
+      })
+  }
+
+  getVenusInfos() {
+    fetch('https://api.le-systeme-solaire.net/rest/bodies/venus')
+      .then(response => response.json())
+      .then((data) => {
+        this.setState({
+          venus_infos: data
+        })
+      })
+  }
+
+  getJupiter() {
+    fetch('https://images-api.nasa.gov/search?q=jupiter')
+      .then(response => response.json())
+      .then((data) => {
+        this.setState({
+          jupiter: data.collection.items[60].links[0].href
+        })
+
+      })
+  }
+
+
   getJupiterInfos() {
     fetch('https://api.le-systeme-solaire.net/rest/bodies/jupiter')
-        .then(response => response.json())
-        .then((data) => {
-            this.setState({
-                jupiter_infos: data
-            })
+      .then(response => response.json())
+      .then((data) => {
+        this.setState({
+          jupiter_infos: data
         })
-}
+      })
+  }
 
   getUranus() {
     fetch('https://images-api.nasa.gov/search?q=uranus')
-        .then(response => response.json())
-        .then((data) => {
-            this.setState({
-                uranus: data.collection.items[3].links[0].href
-            })
-
+      .then(response => response.json())
+      .then((data) => {
+        this.setState({
+          uranus: data.collection.items[3].links[0].href
         })
-}
+
+      })
+  }
 
 
-getUranusInfos() {
-  fetch('https://api.le-systeme-solaire.net/rest/bodies/uranus')
+  getUranusInfos() {
+    fetch('https://api.le-systeme-solaire.net/rest/bodies/uranus')
       .then(response => response.json())
       .then((data) => {
-          this.setState({
-              uranus_infos: data
-          })
+        this.setState({
+          uranus_infos: data
+        })
       })
-}
+  }
 
-getEarthInfos() {
-  fetch('https://api.le-systeme-solaire.net/rest/bodies/terre')
+  getEarthInfos() {
+    fetch('https://api.le-systeme-solaire.net/rest/bodies/terre')
       .then(response => response.json())
       .then((data) => {
-          this.setState({
-              earth_infos: data
-          })
+        this.setState({
+          earth_infos: data
+        })
       })
-}
+  }
 
 
+  affichage(){
+      /*console.log("name : ", this.props.currentNameCharacter);
+    console.log("currentCharacter : ", this.props.currentCharacter);
+*/
+  }
 
-    render() {
-      let count = 0;
-      for(let i = 0; i < items.length; i++){
-        count = 0;
-        for(let j in this.state){
-          if(count === i){
+  render() {
+
+    let count = 0;
+    for (let i = 0; i < items.length; i++) {
+      count = 0;
+      for (let j in this.state) {
+        if (count === i) {
           items[i].src = this.state[j];
           items[i].infos = this.state[props_planet[i]];
-          }
-        count += 1;
         }
+        count += 1;
       }
-
-      let earth = this.state.earth_infos;
-
-      this.props.dispatch({type:SELECT_REFERENCE_PLANET_EARTH.type, earth});
-
-
-      return (
-        <div>
-          {(items[0].src !== "" && items[1].src !== "" && items[2].src !== "" && items[3].src !== "") ? <SliderPlanets planets={items}/>: ""}
-        </div>
-      )
-
-
     }
+
+    let earth = this.state.earth_infos;
+    this.props.dispatch({ type: SELECT_REFERENCE_PLANET_EARTH.type, earth });
+
+
+
+
+    return (
+      <div>
+        {this.affichage()}
+        {(items[0].src !== "" && items[1].src !== "" && items[2].src !== "" && items[3].src !== "") ? <SliderPlanets planets={items} /> : ""}
+      </div>
+    )
+
+
+  }
 }
 
 const mapStateToProps = state => {
 
-    return ({
-        lang: state.lang,
-        currentCharacter: state.currentCharacter
-    })
+  return ({
+    lang: state.lang,
+    currentCharacter: state.currentCharacter,
+    currentNameCharacter:state.currentNameCharacter
+
+  })
 };
 
 
