@@ -24,9 +24,10 @@ h3,h5{
 .buttons-planets{
     text-align: center;
     margin-top: 5%;
-    
-    
+
 }
+
+
 
 
 @media screen and (max-width:500px){
@@ -36,3 +37,4 @@ h3,h5{
     }
 
 }
+

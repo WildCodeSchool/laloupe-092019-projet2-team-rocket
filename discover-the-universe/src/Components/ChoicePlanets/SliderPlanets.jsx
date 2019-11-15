@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import {Carousel,CarouselItem,CarouselControl,CarouselIndicators,CarouselCaption} from 'reactstrap';
 import LinkButton from '../LinkButton';
 import {SELECT_PLANET, SELECT_PLANET_PICTURE} from '../actionTypes';
+import './SliderPlanet.css'
 
 
 class Sliderclass extends React.Component{
@@ -100,7 +101,7 @@ class Sliderclass extends React.Component{
       <Fragment>
           {this.currentPlanet()}
           {this.currentPlanetPicture()}
-          {this.currentPlanet.id === "mars" ? this.currentPlanet():""}
+          <p className="name-planet">{this.currentPlanet.id === "mars" ? this.currentPlanet():""}</p>
           <NavBar />
           <div className="">
             <h3>{this.props.lang.choicePlanet[0]}</h3>
